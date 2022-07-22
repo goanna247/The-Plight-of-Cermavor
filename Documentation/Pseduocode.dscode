@@ -1,0 +1,129 @@
+
+// SHOOT Class, script attached to the bullets shot from the handheld gun
+BEGIN
+  shootDestructionTimer <- 2
+  shootTimer <- 0
+  applyShootDamage <- 5
+
+  Update module 
+    shootTimer <- shootTimer + deltaTime
+
+    IF shootTimer >= shootDestructionTime THEN
+      Call Destroy(gameObject)
+    ENDIF
+  End module
+
+  OnCollisionEnter module 
+    IF other.transform.tag != "Untagged" THEN
+      Call Destroy(gameObject)
+    ENDIF
+
+    IF other.transform.tag = "ENEMY" THEN
+      Call other.gameObject.GetComponent<HealthScript>().ApplyDamage(applyShootDamage)
+    ENDIF
+  End module
+END
+
+// Inside the enemy manager class, spawns enemies at the spawn points in the order they appear in the array
+
+Module SpawnEnemies 
+  BEGIN
+    index <- 0
+
+    FOR i <- 0 TO enemyCount - 1
+      IF index >= enemySpawnPoints.Length THEN
+        index <- 0
+      ENDIF
+      Call Instantiate(enemyPrefab, enemySpawnPoints[index].position, rotation)
+      index <- index + 1
+    ENDFOR
+    enemyCount <- 0
+  END
+End module
+
+
+// Inside the controller manager class
+
+BEGIN
+  Update Module 
+    IF Input("B") THEN
+      IF isGun THEN
+        isGun <- false
+      ELSE
+        isGun <- true
+      ENDIF
+    ENDIF
+
+    IF isGun THEN
+      Output("Controller is in gun mode")
+    ELSE 
+      Output("Controller is not in gun mode")
+    ENDIF
+
+    IF isGun THEN
+      Call RightController.SetActive(false)
+      Call RightHighlightedController.SetActive(false)
+      Call Gun.SetActive(true)
+    ELSE
+      Call Gun.SetActive(false)
+    ENDIF
+
+    IF !isGun THEN
+      IF INPUT(RightIndexTrigger) THEN
+        Call RightController.SetActive(false)
+        Call RightHighlightedController.SetActive(true)
+        rightPressed <- true
+      ELSE 
+        Call RightController.SetActive(true)
+        Call RightHighlightedController.SetActive(false)
+        rightPressed <- false
+      ENDIF 
+    ENDIF
+
+    IF INPUT(LeftIndexTrigger) THEN
+      Call LeftController.SetActive(false)
+      Call LeftHighlightedController.SetActive(true)
+      leftPressed <- true
+    ELSE 
+      Call LeftController.SetActive(true)
+      Call LeftHighlightedController.SetActive(false)
+      leftPressed <- false
+    END IF
+  End module
+END 
+
+
+//inside the health script, enemyHealth is a global variable as it is changed throughout the game by the game manager script and so is not initialised here
+BEGIN
+  Start module
+    playerHealth <- 100
+    cannonHealth <- 20
+    wallHealth <- 40
+
+    CASE objectType OF 
+      = PLAYER : health <- playerHealth
+      = ENEMY : health <- enemyHealth
+      = CANNON : health <- cannonHealth
+      = WALL : health <- wallHealth
+      ELSE OUTPUT("health script enum not selected")
+    End CASE
+  End module
+END
+
+
+
+//inside the materials class, makes the material bob up and down using a sin function
+BEGIN
+  speed <- 1
+  height <- 0.2
+
+  Start module 
+    currentX <- position.x
+    currentZ <- position.z
+  end module
+
+  Update module 
+    newY <- Call Sin(time * speed)
+    transform.position <- (currentX, newY + 2, currentZ) * height
+  end module 
+END

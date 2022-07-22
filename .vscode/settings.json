@@ -1,3 +1,10 @@
 {
-  "docwriter.style": "Auto-detect"
+  "docwriter.style": "Doxygen"
+
+  "rainbowString": {
+    "extensions": [
+      ".cs"
+      ".dscode"
+    ]
+  }
 }
