@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['radius_0',['radius',['../class_attack_script.html#ab777e60533c6b5f52671e49c7bf5081f',1,'AttackScript.radius()'],['../class_enemy_controller.html#a3f7f513e6f386b0e91c8806f6290205d',1,'EnemyController.radius()']]],
-  ['resourcescollected_1',['resourcesCollected',['../class_globals.html#a85d3c38fbceb31d8a0337a079db3c22c',1,'Globals']]],
-  ['rightcontroller_2',['RightController',['../class_controller_manager.html#a8902bacbadf07d9b4ec629007c99fc66',1,'ControllerManager']]],
-  ['rightdebugcube_3',['rightDebugCube',['../class_controller_manager.html#abb9ca684d1acb8522625c517dd21c8e7',1,'ControllerManager']]],
-  ['righthighlightedcontroller_4',['RightHighlightedController',['../class_controller_manager.html#ae7a13a9aca2e17820144bc0a1045ed26',1,'ControllerManager']]],
-  ['rightpressed_5',['rightPressed',['../class_globals.html#a387222aba552a76dbaac5e0c981744e1',1,'Globals']]],
-  ['runspeed_6',['runSpeed',['../class_enemy_controller.html#a7971a8b2e6551b59c1c1fbf4656eb3d8',1,'EnemyController']]]
+  ['patrolforthistime_0',['patrolForThisTime',['../class_enemy_controller.html#a08bfaa8df10fb54eaab817c1627f3e69',1,'EnemyController']]],
+  ['patrolradiusmax_1',['patrolRadiusMax',['../class_enemy_controller.html#a0270941633cdbd0157c434e3472de466',1,'EnemyController']]],
+  ['patrolradiusmin_2',['patrolRadiusMin',['../class_enemy_controller.html#af20592404d581d736c46aa5dd77a3991',1,'EnemyController']]],
+  ['patrolspeed_3',['patrolSpeed',['../class_enemy_controller.html#a11f33ccdef137320d695df8c75ec4ee7',1,'EnemyController']]],
+  ['pink_4',['pink',['../class_controller_manager.html#ac2c9a9d1d391d0cd07df1048b5a6c6c7',1,'ControllerManager']]],
+  ['pink1_5',['pink1',['../class_gun.html#a5221ae210279761e8d746f39cb61fbcd',1,'Gun']]],
+  ['player_6',['PLAYER',['../class_tags.html#adc69d6aca2937085d408f8f1596d3a86',1,'Tags']]],
+  ['profitthiscycle_7',['profitThisCycle',['../class_globals.html#ae8ac609819f0cb2b37818b131940ddca',1,'Globals']]],
+  ['profittotal_8',['profitTotal',['../class_globals.html#a370f4ec4deec190742ed2c99edfbeb16',1,'Globals']]]
 ];

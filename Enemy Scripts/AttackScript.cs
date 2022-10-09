@@ -10,18 +10,11 @@ public class AttackScript : MonoBehaviour {
 
 // If there are any objects within the radius of the attack sphere area, apply damage to the first one
 	void Update () {
-    Collider[] hits = Physics.OverlapSphere(transform.position, radius, layerMask);
+    // Collider[] hits = Physics.OverlapSphere(transform.position, radius, layerMask);
 
-    if(hits.Length > 0) {
-      hits[0].gameObject.GetComponent<HealthScript>().ApplyDamage(damage);
-      gameObject.SetActive(false);
-    }
+    // if(hits.Length > 0) {
+    //   hits[0].gameObject.GetComponent<HealthScript>().ApplyDamage(damage);
+    //   gameObject.SetActive(false);
+    // }
   }
 }
-
-
-
-
-
-
-

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static Globals;
 
 public class HealthScript : MonoBehaviour {
 
@@ -36,6 +37,12 @@ public class HealthScript : MonoBehaviour {
     if (isEnemy && health <= 0) {
       EnemyDead();
     }
+
+    if (!Globals.IsNight) {
+      if (isEnemy) {
+        EnemyDead();
+      }
+    }
   }
 
 /// This function takes in a float called damage and subtracts it from the health variable.
@@ -49,6 +56,9 @@ public class HealthScript : MonoBehaviour {
 
 /// When the enemy dies, destroy the game object
   void EnemyDead() {
+    if (isEnemy) {
+      Globals.totalMoney += 0.1f;
+    }
     Destroy(gameObject);
   }
 

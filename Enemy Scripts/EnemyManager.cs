@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Globals;
 
 public class EnemyManager : MonoBehaviour {
   public static EnemyManager instance; //self
@@ -10,11 +11,12 @@ public class EnemyManager : MonoBehaviour {
 
   public Transform[] enemySpawnPoints; //array storing the points in which the enemies will spawn from
 
-  [SerializeField]
-  private int enemyCount; //the amount of enemies currently active
+  private int enemyCount = Globals.enemyCount; //the amount of enemies currently active
 
   private int initialEnemyCount; //the initial enemy count
   public float waitBeforeSpawnTime = 2f; //amount of time before the enemies are spawned
+
+  private bool enemiesSpawned = false;
 
   ///when the object is awake start the inisiation of the enemy objects 
   void Awake() {
@@ -25,10 +27,21 @@ public class EnemyManager : MonoBehaviour {
   /// we start the CheckToSpawnEnemies() coroutine.
   void Start() {
     initialEnemyCount = enemyCount;
+  }
 
-    SpawnEnemies();
+  void Update() {
+    if (enemiesSpawned == false) {
+      if (Globals.IsNight) {
+        SpawnEnemies();
+        StartCoroutine("CheckToSpawnEnemies");
+        enemiesSpawned = true;
+      }
+    }
 
-    StartCoroutine("CheckToSpawnEnemies");
+    if (!Globals.IsNight) {
+      enemiesSpawned = false;
+      enemyCount = Globals.enemyCount;
+    }
   }
 
 /// If the instance variable is null, then set it to this

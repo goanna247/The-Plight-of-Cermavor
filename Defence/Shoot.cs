@@ -5,7 +5,7 @@ using System.Collections.Generic;
 //object on the bullet being shot by the players handgun
 
 public class Shoot : MonoBehaviour {
-  public float shootDestructionTime = 2f; //the amount of time before the bullet is destroyed
+  public float shootDestructionTime = 5f; //the amount of time before the bullet is destroyed
   public float shootTimer = 0; //timer that keeps track of how long the bullet has been active for
 
   public float applyShootDamage = 5f;//how much damage the bullet applies 
@@ -17,7 +17,7 @@ public class Shoot : MonoBehaviour {
     shootTimer += Time.deltaTime;
 
     if (shootTimer >= shootDestructionTime) {
-      Destroy(gameObject);
+      // Destroy(gameObject);
     }
   }
 

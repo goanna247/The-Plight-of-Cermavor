@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Plight of Cermavor: ControllerManager Class Reference</title>
+<title>The Plight Of Cermavor: ControllerManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,9 +25,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Plight of Cermavor<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">The Plight Of Cermavor
    </div>
-   <div id="projectbrief">Y12 WACE Computer Science Project</div>
   </td>
  </tr>
  </tbody>
@@ -47,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_controller_manager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,7 +81,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -79,10 +98,6 @@ Inheritance diagram for ControllerManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a4bc796430e9ef8d8f0d5013479bd2250"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller_manager.html#a4bc796430e9ef8d8f0d5013479bd2250">leftDebugCube</a></td></tr>
-<tr class="separator:a4bc796430e9ef8d8f0d5013479bd2250"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb9ca684d1acb8522625c517dd21c8e7"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller_manager.html#abb9ca684d1acb8522625c517dd21c8e7">rightDebugCube</a></td></tr>
-<tr class="separator:abb9ca684d1acb8522625c517dd21c8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2850b314345a21b5b6b55558ca7b855f"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller_manager.html#a2850b314345a21b5b6b55558ca7b855f">LeftController</a></td></tr>
 <tr class="separator:a2850b314345a21b5b6b55558ca7b855f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af702dba2d8494123395e6c7edf7a03cf"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller_manager.html#af702dba2d8494123395e6c7edf7a03cf">LeftHighlightedController</a></td></tr>
@@ -101,10 +116,16 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a58c63420f53402e7af85bb8f3fda9c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2c9a9d1d391d0cd07df1048b5a6c6c7"><td class="memItemLeft" align="right" valign="top">Material&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller_manager.html#ac2c9a9d1d391d0cd07df1048b5a6c6c7">pink</a></td></tr>
 <tr class="separator:ac2c9a9d1d391d0cd07df1048b5a6c6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0640b57de0429a24503d5ae21c0f21ab"><td class="memItemLeft" align="right" valign="top">Canvas&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller_manager.html#a0640b57de0429a24503d5ae21c0f21ab">menuObject</a></td></tr>
+<tr class="separator:a0640b57de0429a24503d5ae21c0f21ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1691ba1fc15f4bcb8b769e94d9ba23d"><td class="memItemLeft" align="right" valign="top">Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller_manager.html#ad1691ba1fc15f4bcb8b769e94d9ba23d">screenImage</a></td></tr>
+<tr class="separator:ad1691ba1fc15f4bcb8b769e94d9ba23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad68f9a7100306a6c121bb27b047900cd"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller_manager.html#ad68f9a7100306a6c121bb27b047900cd">menuDebugCube</a></td></tr>
+<tr class="separator:ad68f9a7100306a6c121bb27b047900cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a74c9e8636a4611f844c036f1f734f4b1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller_manager.html#a74c9e8636a4611f844c036f1f734f4b1">isGun</a> = false</td></tr>
+<tr class="memitem:a74c9e8636a4611f844c036f1f734f4b1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller_manager.html#a74c9e8636a4611f844c036f1f734f4b1">isGun</a> = true</td></tr>
 <tr class="separator:a74c9e8636a4611f844c036f1f734f4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -160,7 +181,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool ControllerManager.isGun = false</td>
+          <td class="memname">bool ControllerManager.isGun = true</td>
         </tr>
       </table>
   </td>
@@ -186,20 +207,6 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a4bc796430e9ef8d8f0d5013479bd2250" name="a4bc796430e9ef8d8f0d5013479bd2250"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bc796430e9ef8d8f0d5013479bd2250">&#9670;&nbsp;</a></span>leftDebugCube</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GameObject ControllerManager.leftDebugCube</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="af702dba2d8494123395e6c7edf7a03cf" name="af702dba2d8494123395e6c7edf7a03cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af702dba2d8494123395e6c7edf7a03cf">&#9670;&nbsp;</a></span>LeftHighlightedController</h2>
 
@@ -208,6 +215,34 @@ Static Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">GameObject ControllerManager.LeftHighlightedController</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad68f9a7100306a6c121bb27b047900cd" name="ad68f9a7100306a6c121bb27b047900cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad68f9a7100306a6c121bb27b047900cd">&#9670;&nbsp;</a></span>menuDebugCube</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject ControllerManager.menuDebugCube</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0640b57de0429a24503d5ae21c0f21ab" name="a0640b57de0429a24503d5ae21c0f21ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0640b57de0429a24503d5ae21c0f21ab">&#9670;&nbsp;</a></span>menuObject</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Canvas ControllerManager.menuObject</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -242,20 +277,6 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abb9ca684d1acb8522625c517dd21c8e7" name="abb9ca684d1acb8522625c517dd21c8e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb9ca684d1acb8522625c517dd21c8e7">&#9670;&nbsp;</a></span>rightDebugCube</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GameObject ControllerManager.rightDebugCube</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ae7a13a9aca2e17820144bc0a1045ed26" name="ae7a13a9aca2e17820144bc0a1045ed26"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae7a13a9aca2e17820144bc0a1045ed26">&#9670;&nbsp;</a></span>RightHighlightedController</h2>
 
@@ -264,6 +285,20 @@ Static Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">GameObject ControllerManager.RightHighlightedController</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1691ba1fc15f4bcb8b769e94d9ba23d" name="ad1691ba1fc15f4bcb8b769e94d9ba23d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1691ba1fc15f4bcb8b769e94d9ba23d">&#9670;&nbsp;</a></span>screenImage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Image ControllerManager.screenImage</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -288,9 +323,13 @@ Static Public Attributes</h2></td></tr>
 <li>C:/Users/61412/Documents/school stuf/Y12/Computer Science/VR-Games/WACE_20_06_2022/Assets/scripts/Player Scripts/<a class="el" href="_controller_manager_8cs.html">ControllerManager.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_controller_manager.html">ControllerManager</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
 </body>
 </html>

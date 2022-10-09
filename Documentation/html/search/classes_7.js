@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['materials_0',['Materials',['../class_materials.html',1,'']]]
+  ['ingamemenu_0',['InGameMenu',['../class_in_game_menu.html',1,'']]]
 ];

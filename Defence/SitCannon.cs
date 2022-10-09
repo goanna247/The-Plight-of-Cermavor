@@ -21,7 +21,7 @@ public class SitCannon : MonoBehaviour {
   private GameObject bulletInstance; // gameobject that stores the instaniated bullet
 
   [SerializeField]
-  private static float sitBulletSpeed = 40f; // scalar speed of the bullet when fired 
+  private static float sitBulletSpeed = 20f; // scalar speed of the bullet when fired 
 
   private static Vector3 direction = Vector3.forward; //the direction the bullet is going to travel, the forward direction from the object
   Vector3 velocity = sitBulletSpeed * direction; // set the velocity by combining the vector direction and scalar speed values

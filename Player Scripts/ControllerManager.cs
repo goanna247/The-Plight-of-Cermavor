@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using static Globals;
+using UnityEngine.UI;
 
 
 //when the user pressed the side toggle, press the front toggle to select. 
 
 public class ControllerManager : MonoBehaviour {
 
-  public GameObject leftDebugCube; //the left debug cube object, used only for debugging purposes
-  public GameObject rightDebugCube; // the right debug cube object, used only for debugging purposes
+  // public GameObject leftDebugCube; //the left debug cube object, used only for debugging purposes
+  // public GameObject rightDebugCube; // the right debug cube object, used only for debugging purposes
 
   public GameObject LeftController; //the left controller prefab
   public GameObject LeftHighlightedController; //the left controller highlighted prefab (features a purple strip around the top)
@@ -32,9 +33,16 @@ public class ControllerManager : MonoBehaviour {
 
   private GameObject SitCannonInstance; //the instance of the sit cannon
 
-  public static bool isGun = false; //used in the gun toggle
+  public static bool isGun = true; //used in the gun toggle
 
   Vector3 upwards; //vector that stores the upwards position 
+
+  public Canvas menuObject;
+  // public GameObject screenImage;
+  private bool screenActive = false;
+  public Image screenImage;
+
+  public GameObject menuDebugCube;
 
   /// We're setting up the controllers, the gun, and the debug cubes. We're also setting up a list of
   /// input devices and a vector3 called upwards.
@@ -45,8 +53,10 @@ public class ControllerManager : MonoBehaviour {
     RightHighlightedController.SetActive(false);
     Gun.SetActive(false);
 
-    leftDebugCube.GetComponent<MeshRenderer>().material = pink;
-    rightDebugCube.GetComponent<MeshRenderer>().material = pink;
+    // screenImage.SetActive(false);
+
+    // leftDebugCube.GetComponent<MeshRenderer>().material = pink;
+    // rightDebugCube.GetComponent<MeshRenderer>().material = pink;
 
     List<InputDevice> devices = new List<InputDevice>();
     InputDevices.GetDevices(devices);
@@ -74,11 +84,37 @@ public class ControllerManager : MonoBehaviour {
       }
     } 
 
-    if (isGun) {
-      leftDebugCube.GetComponent<MeshRenderer>().material = blue;
-    } else {
-       leftDebugCube.GetComponent<MeshRenderer>().material = green;
+    if (OVRInput.GetUp(OVRInput.Button.Three)) {
+      if (screenActive) {
+        screenActive = false;
+      } else {
+        screenActive = true;
+      }
     }
+
+    if (screenActive) {
+      // menuObject.alpha = 0f;
+      // menuObject.blocksRaycasts = false;
+      screenImage.enabled = true;
+      Globals.menuOpen = true;
+      // screenImage.SetActive(true);
+      menuDebugCube.GetComponent<MeshRenderer>().material = pink;
+
+    } else {
+      // menuObject.alpha = 1f;
+      // menuObject.blocksRaycasts = true;
+      screenImage.enabled = false;
+      Globals.menuOpen = false;
+      // screenImage.SetActive(false);
+      menuDebugCube.GetComponent<MeshRenderer>().material = blue;
+
+    }
+ 
+    // if (isGun) {
+    //   leftDebugCube.GetComponent<MeshRenderer>().material = blue;
+    // } else {
+    //    leftDebugCube.GetComponent<MeshRenderer>().material = green;
+    // }
 
     if (isGun) {
       RightController.SetActive(false);

@@ -18,7 +18,17 @@ float \mbox{\hyperlink{class_game_manager_a3c2d1b9dc8d70a999fcc785c8b0e675e}{len
 \item 
 float \mbox{\hyperlink{class_game_manager_ab45e5ef60e78159627c9ac437e831d6d}{length\+Of\+Night}} = 90f
 \item 
+Material \mbox{\hyperlink{class_game_manager_a28d825a880d20df97fc533ce1aedeebc}{Day\+Sky}}
+\item 
+Material \mbox{\hyperlink{class_game_manager_a76906a8ed4e47e10dc8a7942395d7dd9}{Night\+Sky}}
+\item 
 Transform\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_game_manager_a890e8295f0aec5b27ff477129c603c6c}{material\+Spawn\+Points}}
+\item 
+int \mbox{\hyperlink{class_game_manager_aeedf6f6385bdd7fd5f5c0e1b400a84bc}{seconds\+In\+ADay}} = 120
+\item 
+int \mbox{\hyperlink{class_game_manager_a541c8abc905a21fac517aa860e9e6920}{seconds\+In\+ANight}} = 90
+\item 
+float \mbox{\hyperlink{class_game_manager_a04d99f2b5a5535af671b4c26386011bf}{day\+Night\+Timer}} = 0
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
@@ -41,6 +51,18 @@ Stop the coroutine that checks to spawn materials.
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_manager_a04d99f2b5a5535af671b4c26386011bf}\label{class_game_manager_a04d99f2b5a5535af671b4c26386011bf}} 
+\index{GameManager@{GameManager}!dayNightTimer@{dayNightTimer}}
+\index{dayNightTimer@{dayNightTimer}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{dayNightTimer}{dayNightTimer}}
+{\footnotesize\ttfamily float Game\+Manager.\+day\+Night\+Timer = 0}
+
+\mbox{\Hypertarget{class_game_manager_a28d825a880d20df97fc533ce1aedeebc}\label{class_game_manager_a28d825a880d20df97fc533ce1aedeebc}} 
+\index{GameManager@{GameManager}!DaySky@{DaySky}}
+\index{DaySky@{DaySky}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{DaySky}{DaySky}}
+{\footnotesize\ttfamily Material Game\+Manager.\+Day\+Sky}
+
 \mbox{\Hypertarget{class_game_manager_a7666e8468dac197b9eb32dd32128524f}\label{class_game_manager_a7666e8468dac197b9eb32dd32128524f}} 
 \index{GameManager@{GameManager}!instance@{instance}}
 \index{instance@{instance}!GameManager@{GameManager}}
@@ -64,6 +86,24 @@ Stop the coroutine that checks to spawn materials.
 \index{materialSpawnPoints@{materialSpawnPoints}!GameManager@{GameManager}}
 \doxysubsubsection{\texorpdfstring{materialSpawnPoints}{materialSpawnPoints}}
 {\footnotesize\ttfamily Transform \mbox{[}$\,$\mbox{]} Game\+Manager.\+material\+Spawn\+Points}
+
+\mbox{\Hypertarget{class_game_manager_a76906a8ed4e47e10dc8a7942395d7dd9}\label{class_game_manager_a76906a8ed4e47e10dc8a7942395d7dd9}} 
+\index{GameManager@{GameManager}!NightSky@{NightSky}}
+\index{NightSky@{NightSky}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{NightSky}{NightSky}}
+{\footnotesize\ttfamily Material Game\+Manager.\+Night\+Sky}
+
+\mbox{\Hypertarget{class_game_manager_aeedf6f6385bdd7fd5f5c0e1b400a84bc}\label{class_game_manager_aeedf6f6385bdd7fd5f5c0e1b400a84bc}} 
+\index{GameManager@{GameManager}!secondsInADay@{secondsInADay}}
+\index{secondsInADay@{secondsInADay}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{secondsInADay}{secondsInADay}}
+{\footnotesize\ttfamily int Game\+Manager.\+seconds\+In\+ADay = 120}
+
+\mbox{\Hypertarget{class_game_manager_a541c8abc905a21fac517aa860e9e6920}\label{class_game_manager_a541c8abc905a21fac517aa860e9e6920}} 
+\index{GameManager@{GameManager}!secondsInANight@{secondsInANight}}
+\index{secondsInANight@{secondsInANight}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{secondsInANight}{secondsInANight}}
+{\footnotesize\ttfamily int Game\+Manager.\+seconds\+In\+ANight = 90}
 
 
 

@@ -9,10 +9,6 @@ Inheritance diagram for Controller\+Manager\+:\begin{figure}[H]
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Game\+Object \mbox{\hyperlink{class_controller_manager_a4bc796430e9ef8d8f0d5013479bd2250}{left\+Debug\+Cube}}
-\item 
-Game\+Object \mbox{\hyperlink{class_controller_manager_abb9ca684d1acb8522625c517dd21c8e7}{right\+Debug\+Cube}}
-\item 
 Game\+Object \mbox{\hyperlink{class_controller_manager_a2850b314345a21b5b6b55558ca7b855f}{Left\+Controller}}
 \item 
 Game\+Object \mbox{\hyperlink{class_controller_manager_af702dba2d8494123395e6c7edf7a03cf}{Left\+Highlighted\+Controller}}
@@ -30,11 +26,17 @@ Material \mbox{\hyperlink{class_controller_manager_a9e7ad5a29be4c64b6f4bd6fb5ab0
 Material \mbox{\hyperlink{class_controller_manager_a58c63420f53402e7af85bb8f3fda9c2f}{green}}
 \item 
 Material \mbox{\hyperlink{class_controller_manager_ac2c9a9d1d391d0cd07df1048b5a6c6c7}{pink}}
+\item 
+Canvas \mbox{\hyperlink{class_controller_manager_a0640b57de0429a24503d5ae21c0f21ab}{menu\+Object}}
+\item 
+Image \mbox{\hyperlink{class_controller_manager_ad1691ba1fc15f4bcb8b769e94d9ba23d}{screen\+Image}}
+\item 
+Game\+Object \mbox{\hyperlink{class_controller_manager_ad68f9a7100306a6c121bb27b047900cd}{menu\+Debug\+Cube}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static bool \mbox{\hyperlink{class_controller_manager_a74c9e8636a4611f844c036f1f734f4b1}{is\+Gun}} = false
+static bool \mbox{\hyperlink{class_controller_manager_a74c9e8636a4611f844c036f1f734f4b1}{is\+Gun}} = true
 \end{DoxyCompactItemize}
 
 
@@ -61,7 +63,7 @@ static bool \mbox{\hyperlink{class_controller_manager_a74c9e8636a4611f844c036f1f
 \index{ControllerManager@{ControllerManager}!isGun@{isGun}}
 \index{isGun@{isGun}!ControllerManager@{ControllerManager}}
 \doxysubsubsection{\texorpdfstring{isGun}{isGun}}
-{\footnotesize\ttfamily bool Controller\+Manager.\+is\+Gun = false\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily bool Controller\+Manager.\+is\+Gun = true\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{class_controller_manager_a2850b314345a21b5b6b55558ca7b855f}\label{class_controller_manager_a2850b314345a21b5b6b55558ca7b855f}} 
 \index{ControllerManager@{ControllerManager}!LeftController@{LeftController}}
@@ -69,17 +71,23 @@ static bool \mbox{\hyperlink{class_controller_manager_a74c9e8636a4611f844c036f1f
 \doxysubsubsection{\texorpdfstring{LeftController}{LeftController}}
 {\footnotesize\ttfamily Game\+Object Controller\+Manager.\+Left\+Controller}
 
-\mbox{\Hypertarget{class_controller_manager_a4bc796430e9ef8d8f0d5013479bd2250}\label{class_controller_manager_a4bc796430e9ef8d8f0d5013479bd2250}} 
-\index{ControllerManager@{ControllerManager}!leftDebugCube@{leftDebugCube}}
-\index{leftDebugCube@{leftDebugCube}!ControllerManager@{ControllerManager}}
-\doxysubsubsection{\texorpdfstring{leftDebugCube}{leftDebugCube}}
-{\footnotesize\ttfamily Game\+Object Controller\+Manager.\+left\+Debug\+Cube}
-
 \mbox{\Hypertarget{class_controller_manager_af702dba2d8494123395e6c7edf7a03cf}\label{class_controller_manager_af702dba2d8494123395e6c7edf7a03cf}} 
 \index{ControllerManager@{ControllerManager}!LeftHighlightedController@{LeftHighlightedController}}
 \index{LeftHighlightedController@{LeftHighlightedController}!ControllerManager@{ControllerManager}}
 \doxysubsubsection{\texorpdfstring{LeftHighlightedController}{LeftHighlightedController}}
 {\footnotesize\ttfamily Game\+Object Controller\+Manager.\+Left\+Highlighted\+Controller}
+
+\mbox{\Hypertarget{class_controller_manager_ad68f9a7100306a6c121bb27b047900cd}\label{class_controller_manager_ad68f9a7100306a6c121bb27b047900cd}} 
+\index{ControllerManager@{ControllerManager}!menuDebugCube@{menuDebugCube}}
+\index{menuDebugCube@{menuDebugCube}!ControllerManager@{ControllerManager}}
+\doxysubsubsection{\texorpdfstring{menuDebugCube}{menuDebugCube}}
+{\footnotesize\ttfamily Game\+Object Controller\+Manager.\+menu\+Debug\+Cube}
+
+\mbox{\Hypertarget{class_controller_manager_a0640b57de0429a24503d5ae21c0f21ab}\label{class_controller_manager_a0640b57de0429a24503d5ae21c0f21ab}} 
+\index{ControllerManager@{ControllerManager}!menuObject@{menuObject}}
+\index{menuObject@{menuObject}!ControllerManager@{ControllerManager}}
+\doxysubsubsection{\texorpdfstring{menuObject}{menuObject}}
+{\footnotesize\ttfamily Canvas Controller\+Manager.\+menu\+Object}
 
 \mbox{\Hypertarget{class_controller_manager_ac2c9a9d1d391d0cd07df1048b5a6c6c7}\label{class_controller_manager_ac2c9a9d1d391d0cd07df1048b5a6c6c7}} 
 \index{ControllerManager@{ControllerManager}!pink@{pink}}
@@ -93,17 +101,17 @@ static bool \mbox{\hyperlink{class_controller_manager_a74c9e8636a4611f844c036f1f
 \doxysubsubsection{\texorpdfstring{RightController}{RightController}}
 {\footnotesize\ttfamily Game\+Object Controller\+Manager.\+Right\+Controller}
 
-\mbox{\Hypertarget{class_controller_manager_abb9ca684d1acb8522625c517dd21c8e7}\label{class_controller_manager_abb9ca684d1acb8522625c517dd21c8e7}} 
-\index{ControllerManager@{ControllerManager}!rightDebugCube@{rightDebugCube}}
-\index{rightDebugCube@{rightDebugCube}!ControllerManager@{ControllerManager}}
-\doxysubsubsection{\texorpdfstring{rightDebugCube}{rightDebugCube}}
-{\footnotesize\ttfamily Game\+Object Controller\+Manager.\+right\+Debug\+Cube}
-
 \mbox{\Hypertarget{class_controller_manager_ae7a13a9aca2e17820144bc0a1045ed26}\label{class_controller_manager_ae7a13a9aca2e17820144bc0a1045ed26}} 
 \index{ControllerManager@{ControllerManager}!RightHighlightedController@{RightHighlightedController}}
 \index{RightHighlightedController@{RightHighlightedController}!ControllerManager@{ControllerManager}}
 \doxysubsubsection{\texorpdfstring{RightHighlightedController}{RightHighlightedController}}
 {\footnotesize\ttfamily Game\+Object Controller\+Manager.\+Right\+Highlighted\+Controller}
+
+\mbox{\Hypertarget{class_controller_manager_ad1691ba1fc15f4bcb8b769e94d9ba23d}\label{class_controller_manager_ad1691ba1fc15f4bcb8b769e94d9ba23d}} 
+\index{ControllerManager@{ControllerManager}!screenImage@{screenImage}}
+\index{screenImage@{screenImage}!ControllerManager@{ControllerManager}}
+\doxysubsubsection{\texorpdfstring{screenImage}{screenImage}}
+{\footnotesize\ttfamily Image Controller\+Manager.\+screen\+Image}
 
 \mbox{\Hypertarget{class_controller_manager_a22657037ba2a6f2ad819916b9e671aed}\label{class_controller_manager_a22657037ba2a6f2ad819916b9e671aed}} 
 \index{ControllerManager@{ControllerManager}!SitCannon@{SitCannon}}

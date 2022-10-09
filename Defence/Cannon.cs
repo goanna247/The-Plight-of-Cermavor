@@ -31,6 +31,5 @@ public class Cannon : MonoBehaviour {
       bulletInstance.GetComponent<Rigidbody>().velocity = velocity;
       bulletCount++;
     }
-    fireTimer += Time.deltaTime;
   }
 }

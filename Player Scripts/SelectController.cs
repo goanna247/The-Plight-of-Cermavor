@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.XR;
 using static Globals;
+using UnityEngine.SceneManagement;
 
 public class SelectController : MonoBehaviour {
 
@@ -23,6 +24,18 @@ public class SelectController : MonoBehaviour {
     if (other.transform.tag == "RESOURCE") {
       Destroy(other.gameObject);
       Globals.resourcesCollected ++;
+    } else if (other.transform.tag == "ROBOTCONTROLLER") {
+      if (!Globals.RobotCollecting) {
+        Globals.RobotCollecting = true;
+      }
+    } else if (other.transform.tag == "DRILLCONTROLLER") {
+      if (!Globals.Drilling) {
+        Globals.Drilling = true;
+      }
+    } else if (other.transform.tag == "UNDER") {
+      SceneManager.LoadScene("Below");
     }
+
+
   }
 }

@@ -1,8 +1,19 @@
 var searchData=
 [
-  ['shootdestructiontime_0',['shootDestructionTime',['../class_shoot.html#a581411a180fffc4ce556e6263fb7ad00',1,'Shoot']]],
-  ['shootdirection_1',['shootDirection',['../class_gun.html#ae8cb2dcbaee997333d0056c9c8f74192',1,'Gun']]],
-  ['shootspeed_2',['shootSpeed',['../class_gun.html#ad6d3578ea5d8017508575661f235fb78',1,'Gun']]],
-  ['shoottimer_3',['shootTimer',['../class_shoot.html#a97fa4f3adb0d7ba190e9c59d8fd6fb60',1,'Shoot']]],
-  ['sitcannon_4',['SitCannon',['../class_controller_manager.html#a22657037ba2a6f2ad819916b9e671aed',1,'ControllerManager']]]
+  ['radius_0',['radius',['../class_attack_script.html#ab777e60533c6b5f52671e49c7bf5081f',1,'AttackScript.radius()'],['../class_enemy_controller.html#a3f7f513e6f386b0e91c8806f6290205d',1,'EnemyController.radius()']]],
+  ['resourcescollected_1',['resourcesCollected',['../class_globals.html#a85d3c38fbceb31d8a0337a079db3c22c',1,'Globals']]],
+  ['resourcestext_2',['resourcesText',['../class_basic_menu.html#af29a5b16d05cadd85a39b49403cc4ed8',1,'BasicMenu']]],
+  ['rightcontroller_3',['RightController',['../class_controller_manager.html#a8902bacbadf07d9b4ec629007c99fc66',1,'ControllerManager']]],
+  ['righthighlightedcontroller_4',['RightHighlightedController',['../class_controller_manager.html#ae7a13a9aca2e17820144bc0a1045ed26',1,'ControllerManager']]],
+  ['rightpressed_5',['rightPressed',['../class_globals.html#a387222aba552a76dbaac5e0c981744e1',1,'Globals']]],
+  ['robot1_6',['robot1',['../class_robots.html#a6447b72bff5f00fda6208ec13d770ad3',1,'Robots']]],
+  ['robot1status_7',['robot1Status',['../class_globals.html#a09f0144f90bbc569ab6ccd70c124cda7',1,'Globals']]],
+  ['robot1status_8',['Robot1Status',['../class_robot_menu.html#afaf7b995e0aca34adbc27f327b16d4f2',1,'RobotMenu']]],
+  ['robot2_9',['robot2',['../class_robots.html#aca6d24bf369ecbcab7e048139a2f1571',1,'Robots']]],
+  ['robot2status_10',['Robot2Status',['../class_robot_menu.html#aab7aa35b7415712acdb58d25898cb2cc',1,'RobotMenu']]],
+  ['robot2status_11',['robot2Status',['../class_globals.html#a1ef2e167ddc8f37de2eff59370f17f28',1,'Globals']]],
+  ['robotcollecting_12',['RobotCollecting',['../class_globals.html#abbbc066654148e850b7e9fce1dc2566d',1,'Globals']]],
+  ['robotlevel_13',['robotLevel',['../class_globals.html#a63e2e93d3456c333eab1877f4de10a49',1,'Globals']]],
+  ['robotlevel_14',['RobotLevel',['../class_robot_menu.html#af89fed9ac7e6ed9a868068a54bd53871',1,'RobotMenu']]],
+  ['runspeed_15',['runSpeed',['../class_enemy_controller.html#a7971a8b2e6551b59c1c1fbf4656eb3d8',1,'EnemyController']]]
 ];

@@ -12,6 +12,9 @@ public class Gun : MonoBehaviour {
   private InputDevice targetDevice; // the target device controller
 
   public GameObject leftDebugCube; //the left debug cube in the scene, only for debugging purposes as there is no console when playing 
+
+  public GameObject gunDebugCube;
+
   public Material blue1; //blue material
   public Material green1; //green material 
   public Material pink1; //pink material 
@@ -25,7 +28,7 @@ public class Gun : MonoBehaviour {
   private float shootTimer; //timer that keeps track of how long the gun has been active 
   private int shootCount; //how many bullets have been shot
 
-  public static float shootSpeed = 40f; //the speed of the bullets when shot
+  public static float shootSpeed = 1f; //the speed of the bullets when shot
 
   public static Vector3 shootDirection; //direction the bullets are being shot in
   Vector3 velocity; //Vector object that stores the velocity, to be later initialised 
@@ -33,6 +36,9 @@ public class Gun : MonoBehaviour {
   private GameObject shootInstance; //gameobject that stores the instance of the bullet created 
 
   private bool fire = false; //whether the gun is being fired
+  private bool isFiring = false;
+  private bool fireT = false;
+  private bool canFire = false;
 
   /// It sets the shootCount variable to 0.
   void Start() {
@@ -42,23 +48,48 @@ public class Gun : MonoBehaviour {
 /// If the gun is being used, and the trigger is pressed, then shoot  
   void Update() {
     if (ControllerManager.isGun) {
-      if (OVRInput.GetUp(OVRInput.Button.One)) { //TODO @Anna Change this to be the trigger axis not a button &TRIGGER Press??
+      if (OVRInput.GetUp(OVRInput.Button.One) || Input.GetKeyUp("f")) { //TODO @Anna Change this to be the trigger axis not a button &TRIGGER Press??
         fire = true;
       } else {
         fire = false;
       }
 
+      if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > Globals.triggerDeadzone) {
+        if (canFire) {
+          isFiring = true;
+        }
+      } 
+
+      if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) < 0.005) {
+        canFire = true;
+      }      
+
+      if (isFiring) {
+        fireT = true;
+        canFire = false;
+      } else {
+        fireT = false;
+      }
+
+      if (fireT) {
+        Shoot();
+        isFiring = false;
+      } else {
+        gunDebugCube.GetComponent<MeshRenderer>().material = orange1;
+      }
+
       if (fire) {
         Shoot();
       } else {
-        leftDebugCube.GetComponent<MeshRenderer>().material = orange1;
+        gunDebugCube.GetComponent<MeshRenderer>().material = orange1;
       }
     }
   }
 
 /// The function instantiates a bullet prefab at the spawn point, and then adds velocity to the bullet.
   void Shoot() {
-    leftDebugCube.GetComponent<MeshRenderer>().material = green1;
+    Debug.Log("shoot");
+    gunDebugCube.GetComponent<MeshRenderer>().material = green1;
     shootInstance = Instantiate(bullet, spawnPoint.position, gameObject.transform.rotation);
     shootInstance.GetComponent<Rigidbody>().velocity = spawnPoint.transform.TransformDirection(Vector3.forward * 10);
     shootCount ++;

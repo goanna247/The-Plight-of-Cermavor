@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enemydied_0',['EnemyDied',['../class_enemy_manager.html#a8b40a84f00bd1f0724051b53a9e90e99',1,'EnemyManager']]]
+  ['deeprocksell_0',['DeepRockSell',['../class_resources_menu.html#af52ed97d464de92f5045d064d4f02cc7',1,'ResourcesMenu']]]
 ];

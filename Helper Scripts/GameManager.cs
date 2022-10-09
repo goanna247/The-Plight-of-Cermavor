@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using static Globals;
 
 //Material gurl
 
@@ -11,6 +12,9 @@ public class GameManager : MonoBehaviour {
 
   public float lengthOfDay = 120f; //length of the day cycle in seconds
   public float lengthOfNight = 90f; //length of the night cycle in seconds
+
+  public Material DaySky;
+  public Material NightSky;
 
   [SerializeField]
   private GameObject materialPrefab; //the matian rock prefab
@@ -24,6 +28,11 @@ public class GameManager : MonoBehaviour {
   private float waitBeforeMaterialTime = 2f; //time before materials are spawned
 
   private Vector3 upwards; //vector that stores the upwards direction
+
+  public int secondsInADay = 120; //the amount of seconds in a day 
+  public int secondsInANight = 90; //the amount of seconds in a night. 
+
+  public float dayNightTimer = 0;
 
   //when the object is awake instaniate the material object 
   void Awake() {
@@ -39,6 +48,8 @@ public class GameManager : MonoBehaviour {
     SpawnMaterial();
 
     StartCoroutine("CheckToSpawnMaterial");
+
+    Globals.IsNight = false;
 
     upwards = new Vector3(0.0f, 3.0f, 0.0f);
   } 
@@ -75,5 +86,33 @@ public class GameManager : MonoBehaviour {
 /// Stop the coroutine that checks to spawn materials
   public void StopMaterialSpawning() {
     StopCoroutine("CheckToSpawnMaterial");
+  }
+
+  void Update() {
+    dayNightTimer += Time.deltaTime;
+    //game starts in the day phase
+    if (Globals.IsNight == false) {
+      if (dayNightTimer < secondsInADay) {
+        Globals.IsNight = false;
+      } else if (dayNightTimer >= secondsInADay) {
+        Globals.IsNight = true;
+      }
+    } else {
+      if (dayNightTimer < secondsInANight + secondsInADay) {
+        IsNight = true;
+      } else if (dayNightTimer >= secondsInANight + secondsInADay) {
+        Globals.day ++;
+        dayNightTimer = 0;
+        IsNight = false;
+      }
+    }
+
+    if (IsNight) {
+      RenderSettings.skybox = NightSky;
+    } else {
+      RenderSettings.skybox = DaySky;
+    }
+
+    enemyCount = Globals.day * 3 + 5;
   }
 }

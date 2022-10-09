@@ -19,7 +19,7 @@ public class EnemyController : MonoBehaviour {
   public float walkSpeed = 0.5f; //the walk speed of the enemy
   public float runSpeed = 4f; //the run speed of the enemy 
 
-  public float chaseDistance = 7f; //the chase distance of the enemy
+  public float chaseDistance = 1000f; //the chase distance of the enemy
   private float currentChaseDistance; //the current distance the enemy has been chasing for
   public float attackDistance = 1.8f; //the distance before the enemy will attack 
   public float chaseAfterAttackDistance = 2f; // the distance the enemy will run after attacking an object
@@ -153,6 +153,7 @@ public class EnemyController : MonoBehaviour {
       enemyState = EnemyState.COME;
     }
   }
+
 
 
 

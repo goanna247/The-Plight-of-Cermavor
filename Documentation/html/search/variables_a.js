@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orange1_0',['orange1',['../class_gun.html#ad4c338e5236cddd0121318742ff1610d',1,'Gun']]]
+  ['nightsky_0',['NightSky',['../class_game_manager.html#a76906a8ed4e47e10dc8a7942395d7dd9',1,'GameManager']]]
 ];
