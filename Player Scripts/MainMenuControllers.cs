@@ -27,23 +27,33 @@ public class MainMenuControllers : MonoBehaviour {
     OVRInput.Update();
 
     if (OVRInput.GetUp(OVRInput.Button.Two)) {
-      SceneManager.LoadScene("MainScene");
+      LoadMainScene();
     }
 
     if (OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger) > Globals.triggerDeadzone) {
-      MenuRightController.SetActive(false);
-      MenuRightControllerSelected.SetActive(true);
+      SetControllersActive(false, false, true);
     } else {
-      MenuRightController.SetActive(true);
-      MenuRightControllerSelected.SetActive(false);
+      SetControllersActive(false, true, false);
     }
 
     if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger) > Globals.triggerDeadzone) {
-      MenuLeftController.SetActive(false);
-      MenuLeftControllerSelected.SetActive(true);
+      SetControllersActive(true, false, true);
     } else {
-      MenuLeftController.SetActive(true);
-      MenuLeftControllerSelected.SetActive(false);
+      SetControllersActive(true, true, false);
     }
+  }
+
+  void SetControllersActive(bool leftController, bool ControllerActive, bool ControllerSelectedActive) {
+    if (leftController) {
+      MenuLeftController.SetActive(ControllerActive);
+      MenuLeftControllerSelected.SetActive(ControllerSelectedActive);
+    } else {
+      MenuRightController.SetActive(ControllerActive);
+      MenuRightControllerSelected.SetActive(ControllerSelectedActive);
+    }
+  }
+
+  void LoadMainScene() {
+    SceneManager.LoadScene("MainScene");
   }
 }
